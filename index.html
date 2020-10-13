@@ -7,17 +7,17 @@
     </head>
     <body>
         <section class="flex">
-            <aside class="">
+            <aside class="flex">
                 <div id="main-links">
                     <ul>
-                        <li><img src="" alt=""><a href="#"><h1>Spotify</h1></a></li>
-                        <li><img src="" alt=""><a href="#"><h2>Home</h2></a></li>
-                        <li><img src="" alt=""><a href="#"><h2>Cerca</h2></a></li>
-                        <li><img src="" alt=""><a href="#"><h2>La tua libreria</h2></a></li>
+                        <li id="logo"><a href="#"><img src="img/logo.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/home.svg" alt=""><h2>Home</h2></a></li>
+                        <li><a href="#"><img src="img/search.svg" alt=""><h2>Cerca</h2></a></li>
+                        <li><a href="#"><img src="img/libreria.svg" alt=""><h2>La tua libreria</h2></a></li>
                     </ul>
                     <h2>PLAYLIST</h2>
                     <ul>
-                        <li><a href="#"><img src="" alt="">Crea Playlist</a></li>
+                        <li><a href="#"><span>+</span>Crea Playlist</a></li>
                         <li><a href="#">Nome Playlist</a></li>
                         <li><a href="#">Nome Playlist</a></li>
                         <li><a href="#">Nome Playlist</a></li>
@@ -27,22 +27,108 @@
                     </ul>
                 </div>
                 <div id="aside-bot">
-                    <a href="#"><img src="" alt="">Installa app</a>
-                    <a href="#"><img src="" alt=""><h3>Francesco</h3></a>
+                    <div>
+                        <a class="flex" href="#"><img src="img/download.svg" alt="">Installa app</a>
+                    </div>
+                    <div>
+                        <a><img src="img/profile.svg" alt=""><h3>Francesco</h3></a>
+                    </div>
                 </div>
             </aside>
 
             <main>
                 <header>
-
+                    <button type="button" name="button">EFFETTUA L'UPGRADE</button>
                 </header>
                 <div class="items">
+                    <nav class="flex">
+                        <ul class="flex">
+                            <li><a href="#">IN EVIDENZA</a></li>
+                            <li><a href="#">PODCAST</a></li>
+                            <li><a href="#">CLASSIFICHE</a></li>
+                            <li><a href="#">GENERI E MOOD</a></li>
+                            <li><a href="#">NUOVE USCITE</a></li>
+                            <li><a href="#">SCOPRI</a></li>
+                        </ul>
+                    </nav>
+                    <div class="section-title">
+                        <h2>Recently Played</h2>
+                    </div>
+                    <div id="recently" class="flex-wrap">
+                        <div class="product">
+                            <img src="img/metal_lifting.jpg" alt="">
+                            <h3>Heavy Metal</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                        <div class="product">
+                            <img src="img/stranger.jpeg" alt="">
+                            <h3>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h3>
+                            <h4>Kyle Dixion & Michael Stein</h4>
+                        </div>
+                        <div class="product">
+                            <img src="img/aquietplace.jpeg" alt="">
+                            <h3>A Quiet Place</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                        <div class="product">
+                            <img src="img/split.jpeg" alt="">
+                            <h3>Split</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                        <div class="product">
+                            <img src="img/cure.jpeg" alt="">
+                            <h3>A cure for wellness</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                        <div class="product">
+                            <img src="img/sinister.jpeg" alt="">
+                            <h3>Sinister</h3>
+                            <h4>Subtitle</h4>
+                        </div>
+                    </div>
+                    <div class="section-title">
+                        <h2>Creato per Francesco</h2>
+                        <h4>Più ascolti, più accurati saranno i suggerimenti.</h4>
+                    </div>
+                    <div id="for-you" class="flex-wrap">
+                        <div class="product">
+                            <img src="img/radar.jpeg" alt="">
+                            <h3>Release Radar</h3>
+                        </div>
+                        <div class="product">
+                            <img src="img/mixdaily.jpeg" alt="">
+                            <h3>Daily Mix 1</h3>
+                        </div>
+                    </div>
+                    <div class="section-title">
+                        <h2>Artisti più Popolari</h2>
+                        <h4>Più ascolti, più accurati saranno i suggerimenti.</h4>
+                    </div>
+                    <div id="artists" class="flex-wrap">
 
+                    </div>
                 </div>
             </main>
 
         </section>
-        <footer>
+        <footer class="flex">
+            <div id="playing" class="flex">
+                <img src="" alt="">
+                <div class="">
+                    <h3></h3>
+                    <h4></h4>
+                </div>
+                <div class="flex-wrap">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="controls">
+
+            </div>
+            <div class="volume">
+
+            </div>
         </footer>
     </body>
 </html>

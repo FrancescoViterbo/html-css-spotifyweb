@@ -9,9 +9,18 @@
     flex-wrap: nowrap;
 }
 
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h4 {
+    color: gray;
+}
+
 body {
     height: 100vh;
-    background: red;
+    background: #0e0f14;
 }
 
 section {
@@ -24,6 +33,11 @@ aside {
     background: black;
     width: 250px;
     color: grey;
+    flex-direction: column;
+    justify-content: space-between;
+}
+aside img {
+    width: 30px;
 }
 ul {
     list-style: none;
@@ -32,14 +46,29 @@ a {
     color: grey;
     text-decoration: none;
 }
-aside li {
+a span {
+    font-size: 35px;
+    font-weight: bolder;
+    background-color: grey;
+    color: black;
+    height: 38px;
+    width: 38px;
+    text-align: center;
+}
+aside a {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#logo img {
+    width: 120px;
 }
 
 main {
     width: 100%;
     position: relative;
     height: calc(100vh - 100px);
+    color: white;
 }
 
 header {
@@ -48,12 +77,29 @@ header {
     top: 0;
     width: 100%;
     height: 100px;
-    background: rgba(0,0,0,0.5);
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+header button {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    padding: 1rem 2.5rem;
+    border-radius: 40px;
+    z-index: 50;
 }
 
 .items {
     overflow: auto;
     max-height: calc(100vh - 100px);
+}
+nav {
+    margin-top: 110px;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
