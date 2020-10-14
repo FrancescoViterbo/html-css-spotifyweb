@@ -1,7 +1,13 @@
+/* Global Settings */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-size: 13px;
 }
 
 .flex {
@@ -59,21 +65,17 @@ a span {
     width: 38px;
     text-align: center;
 }
-.overflow {
-    overflow: auto;
-    /* flex: 0 1 200px; */
-}
-/* aside {
-    max-height: calc(100vh - 100px);
-} */
+
+/* Aside */
+
 aside {
     background: black;
     width: 250px;
     color: grey;
-    /* height: calc(100vh - 100px); */
     flex-direction: column;
     justify-content: space-between;
     font-size: 12px;
+    overflow: hidden;
 }
 aside>div {
     margin: 1rem 0;
@@ -99,13 +101,17 @@ aside span {
     width: 120px;
     margin-bottom: 1rem;
 }
+#logo img:last-child {
+    display: none;
+}
 
 
 #main-links ul:first-of-type li:first-of-type {
     text-align: center;
 }
 #playlist {
-    flex: 1 0 100px;
+    flex: 1 0 10px;
+    overflow: auto;
 }
 #playlist h2 {
     margin-left: 1.4rem;
@@ -118,7 +124,7 @@ aside span {
 #items .flex-wrap {
     justify-content: center;
     align-items: center;
-    font-size: 14px;
+    font-size: 11px;
 }
 #items a:hover .active-border {
     background-color: lightgreen;
@@ -128,7 +134,7 @@ aside span {
     margin-left: calc(1rem + 5px);
 }
 #items h3, #items h4 {
-    margin: 1rem;
+    margin: 1rem 0.4rem;
 }
 #aside-bot div:first-child a {
     border-bottom: 1px solid grey;
@@ -143,6 +149,7 @@ aside span {
 #aside-bot div:last-child h3 {
     color: white;
 }
+/* Main */
 
 main {
     width: 100%;
@@ -150,6 +157,8 @@ main {
     height: calc(100vh - 100px);
     color: white;
 }
+
+/* Header */
 header {
     position: absolute;
     left: 0;
@@ -172,15 +181,19 @@ header button {
     z-index: 50;
     font-weight: bold;
     cursor: pointer;
+    font-size: 12px;
 }
 header button:hover {
-    font-size: 15px;
+    font-size: 13px;
 }
 nav {
     margin-top: 110px;
     justify-content: center;
     align-items: center;
 }
+
+/* Items */
+
 #items .flex-wrap h4 {
     margin-bottom: 0.4rem;
 }
@@ -220,13 +233,12 @@ nav {
     bottom: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* display: none; */
 }
 
+
+/* Footer */
+
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     width: 100%;
     height: 100px;
     background: #242424;
@@ -235,38 +247,140 @@ footer {
     align-items: center;
     font-size: 10px;
 }
-#playing img {
-    width: 45%;
+footer>div {
+    position: relative;
+}
+#playing>img {
+    width: 30%;
     margin: auto;
     max-width: 100px;
+    margin-left: 1rem;
 }
 #playing {
-    flex: 0 1 180px;
+    flex: 0 1 220px;
+    align-items: center;
+}
+#playing div img {
+    height: 17px;
+    width: 17px;
+}
+#playing a {
+    display: inline-block;
+}
+#playing a img:last-child {
+    display: none;
+}
+#playing a:hover img:first-child {
+    display: none;
+}
+#playing a:hover img:last-child {
+    display: inline-block;
 }
 #controls {
     flex: 0 1 400px;
     text-align: center;
 }
+#controls>div:nth-of-type(2) {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: calc(25px + 0.2rem);
+}
+#contorl-buttons {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#control-buttons a {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    position: relative;
+    margin: 0.2rem 0;
+}
 #control-buttons img {
-    height: 25px;
-    margin: 0.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20px;
 }
-#control-buttons img:nth-of-type(3) {
-    height: 35px;
+#control-buttons a:nth-of-type(3) img {
+    height:30px;
 }
-#time-bar, #volume-bar {
+#control-buttons a:nth-of-type(4) {
+    transform: rotate(180deg);
+}
+#control-buttons a:nth-of-type(3) img:hover {
+    height:40px;
+}
+#elapsed-time, #total-time {
+    color: white;
+}
+#time-bar {
+    background-color: grey;
+    border-radius: 10px;
+    width: 85%;
+    cursor: pointer;
+}
+#progress {
+    width: 30%;
+    background-color: darkgrey;
     height: 4px;
     border-radius: 10px;
-    width: 100%;
-    background-color: grey;
+    position: relative;
+}
+#time-bar:hover #progress {
+    background-color: lightgreen;
+}
+#time-bar:hover input {
+    display: inline-block;
 }
 #volume {
     min-height: 10px;
-    flex: 0 1 180px;
+    flex: 0 1 220px;
+    padding-right: 1rem;
+}
+#volume>* {
+    margin: 0 0.4rem;
+}
+#volume img {
+    height:18px;
+    width: 18px;
 }
 #volume-bar {
     width: 50%;
     margin: auto;
+    background-color: grey;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#actual-volume {
+    width: 40%;
+    background-color: darkgrey;
+    height: 4px;
+    border-radius: 10px;
+    position: relative;
+}
+#volume-bar:hover #actual-volume {
+    background-color: lightgreen;
+}
+#volume-bar:hover input {
+    display: inline-block;
+}
+input[type="button"] {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: 15px;
+    width: 15px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+    display: none;
+    border: 0;
 }
 footer h3 {
     color: white;
@@ -274,12 +388,47 @@ footer h3 {
 
 /* Media Queries */
 
-@media screen and (max-width: 1125px) {
+@media screen and (max-width: 1010px) {
     #recently, #for-you, #artists {
         justify-content: flex-start;
         flex-wrap: wrap;
     }
     .empty {
+        display: none;
+    }
+}
+@media screen and (max-width: 560px) {
+    aside {
+        width: 50px;
+    }
+    aside li {
+        margin: 0;
+    }
+    aside a {
+        margin: 1rem auto;
+    }
+    aside img {
+        margin: auto;
+    }
+    aside h2, aside h4, aside h3 {
+        display: none;
+    }
+    #logo img:first-child {
+        display: none;
+    }
+    #logo img:last-child {
+        display: inline-block;
+        width: 30px;
+    }
+    #playlist {
+        display: none;
+    }
+    #control-buttons a {
+        width: 30px;
+    }
+}
+@media screen and (max-width: 420px) {
+    #playing>img {
         display: none;
     }
 }

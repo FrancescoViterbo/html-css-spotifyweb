@@ -11,7 +11,7 @@
             <aside class="flex">
                 <div id="main-links">
                     <ul>
-                        <li id="logo"><a href="#"><img src="img/logo.svg" alt=""></a></li>
+                        <li id="logo"><a href="#"><img src="img/logo.svg" alt=""><img src="img/logo-small.svg" alt=""></a></li>
                         <li><a href="#"><img src="img/home.svg" alt=""><h2>Home</h2></a></li>
                         <li><a href="#"><img src="img/search.svg" alt=""><h2>Cerca</h2></a></li>
                         <li><a href="#"><img src="img/libreria.svg" alt=""><h2>La tua libreria</h2></a></li>
@@ -177,32 +177,55 @@
                     <h4>Brano Nome</h4>
                 </div>
                 <div>
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <a href="#">
+                        <img src="img/controls/various/cuori-gray.png" alt="">
+                        <img src="img/controls/various/cuori.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/controls/various/cartella-gray.png" alt="">
+                        <img src="img/controls/various/cartella.png" alt="">
+                    </a>
                 </div>
             </div>
             <div id="controls">
                 <div id="control-buttons">
-                    <img src="img/controls/riproduzione-casuale.png" alt="">
-                    <img src="img/controls/ad-inizio.png" alt="">
-                    <img src="img/controls/play.svg" alt="">
-                    <img src="img/controls/ad-inizio.png" alt="">
-                    <img src="img/controls/riavviare.svg" alt="">
+                    <a href="#">
+                        <img src="img/controls/riproduzione-casuale.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/controls/ad-inizio.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/controls/play.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/controls/ad-inizio.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/controls/riavviare.svg" alt="">
+                    </a>
                 </div>
-                <div class="">
-                    <p id="elapsed-time"></p>
+                <div class="flex">
+                    <div id="elapsed-time">
+                        <p>0:25</p>
+                    </div>
                     <div id="time-bar">
                         <div id="progress">
-
+                            <input type="button" name="" value="">
                         </div>
                     </div>
-                    <p id="total-time"></p>
+                    <div id="total-time">
+                        <p>4:35</p>
+                    </div>
                 </div>
             </div>
-            <div id="volume">
+            <div id="volume" class="flex">
+                <img src="img/controls/various/lista.png" alt="">
+                <img src="img/controls/various/monitor.png" alt="">
+                <img src="img/controls/various/volume.png" alt="">
                 <div id="volume-bar">
-                    <div id="volume">
-
+                    <div id="actual-volume">
+                        <input type="button" name="" value="">
                     </div>
                 </div>
             </div>
