@@ -41,6 +41,15 @@ a {
     color: grey;
     text-decoration: none;
 }
+a:hover {
+    color: white;
+}
+a:hover h2, a:hover h4 {
+    color: white;
+}
+a:hover span {
+    background-color: white;
+}
 a span {
     font-size: 35px;
     font-weight: bolder;
@@ -66,6 +75,9 @@ aside {
     justify-content: space-between;
     font-size: 12px;
 }
+aside>div {
+    margin: 1rem 0;
+}
 aside h2 {
     font-size: 12px;
 }
@@ -85,6 +97,7 @@ aside span {
 }
 #logo img {
     width: 120px;
+    margin-bottom: 1rem;
 }
 
 
@@ -107,6 +120,9 @@ aside span {
     align-items: center;
     font-size: 14px;
 }
+#items a:hover .active-border {
+    background-color: lightgreen;
+}
 #items h2 {
     margin: 3rem 0 1rem 0;
     margin-left: calc(1rem + 5px);
@@ -117,6 +133,15 @@ aside span {
 #aside-bot div:first-child a {
     border-bottom: 1px solid grey;
     padding-bottom: 0.4rem;
+}
+#aside-bot div:last-of-type img {
+    background-color: grey;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+#aside-bot div:last-child h3 {
+    color: white;
 }
 
 main {
@@ -145,17 +170,26 @@ header button {
     padding: 1rem 2.5rem;
     border-radius: 40px;
     z-index: 50;
+    font-weight: bold;
+    cursor: pointer;
+}
+header button:hover {
+    font-size: 15px;
 }
 nav {
     margin-top: 110px;
     justify-content: center;
     align-items: center;
 }
+#items .flex-wrap h4 {
+    margin-bottom: 0.4rem;
+}
 .active-border {
-    height: 1px;
+    height: 2px;
     width: 50px;
     margin: 0 auto;
     background-color: grey;
+    border-radius: 10px;
 }
 #recently, #for-you, #artists {
     justify-content: space-between;
@@ -168,12 +202,25 @@ nav {
     min-height: 10px;
     margin: 5px;
 }
+
 .product h3, .product h4, .product img {
     max-width: 100%;
 }
 .artist h3, .artist h4, .artist img {
     max-width: 100%;
     border-radius: 50%;
+}
+.img-over {
+    position: relative;
+}
+.ready-to-play {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* display: none; */
 }
 
 footer {
@@ -182,8 +229,47 @@ footer {
     bottom: 0;
     width: 100%;
     height: 100px;
-    background: grey;
+    background: #242424;
     z-index: 51;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+}
+#playing img {
+    width: 45%;
+    margin: auto;
+    max-width: 100px;
+}
+#playing {
+    flex: 0 1 180px;
+}
+#controls {
+    flex: 0 1 400px;
+    text-align: center;
+}
+#control-buttons img {
+    height: 25px;
+    margin: 0.5rem;
+}
+#control-buttons img:nth-of-type(3) {
+    height: 35px;
+}
+#time-bar, #volume-bar {
+    height: 4px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: grey;
+}
+#volume {
+    min-height: 10px;
+    flex: 0 1 180px;
+}
+#volume-bar {
+    width: 50%;
+    margin: auto;
+}
+footer h3 {
+    color: white;
 }
 
 /* Media Queries */
