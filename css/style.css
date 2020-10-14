@@ -5,41 +5,33 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-size: 13px;
 }
-
 .flex {
     display: flex;
     flex-wrap: nowrap;
 }
-
 .flex-wrap {
     display: flex;
     flex-wrap: wrap;
 }
-
 h1, h2, h3, h4, li, a {
     margin: 0.2rem 0.4rem;
 }
-
 h4 {
     color: gray;
 }
-
 body {
     height: 100vh;
     background: #0e0f14;
     font-family: sans-serif;
 }
-
 section {
     justify-content: flex-start;
     align-items: stretch;
     height: calc(100vh - 100px);
 }
-
 ul {
     list-style: none;
 }
@@ -104,8 +96,6 @@ aside span {
 #logo img:last-child {
     display: none;
 }
-
-
 #main-links ul:first-of-type li:first-of-type {
     text-align: center;
 }
@@ -215,7 +205,6 @@ nav {
     min-height: 10px;
     margin: 5px;
 }
-
 .product h3, .product h4, .product img {
     max-width: 100%;
 }
@@ -246,7 +235,6 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 
 /* Footer */
 
