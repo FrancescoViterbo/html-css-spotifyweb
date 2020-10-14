@@ -7,6 +7,9 @@
 }
 body {
     font-size: 13px;
+    height: 100vh;
+    background: #171924;
+    font-family: 'Roboto', sans-serif;
 }
 .flex {
     display: flex;
@@ -21,11 +24,6 @@ h1, h2, h3, h4, li, a {
 }
 h4 {
     color: gray;
-}
-body {
-    height: 100vh;
-    background: #171924;
-    font-family: sans-serif;
 }
 section {
     justify-content: flex-start;
@@ -248,9 +246,9 @@ nav {
 /* Footer */
 
 footer {
-    position: fixed;
+    /* position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 0; */
     width: 100%;
     height: 100px;
     background: #242424;
