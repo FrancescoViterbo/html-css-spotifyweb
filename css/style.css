@@ -24,7 +24,7 @@ h4 {
 }
 body {
     height: 100vh;
-    background: #0e0f14;
+    background: #171924;
     font-family: sans-serif;
 }
 section {
@@ -70,7 +70,7 @@ aside {
     overflow: hidden;
 }
 aside>div {
-    margin: 1rem 0;
+    margin: 0.4rem 0;
 }
 aside h2 {
     font-size: 12px;
@@ -99,14 +99,23 @@ aside span {
 #main-links ul:first-of-type li:first-of-type {
     text-align: center;
 }
-#playlist {
-    flex: 1 0 10px;
-    overflow: auto;
+#playlist-title {
+    margin-bottom: 0;
 }
-#playlist h2 {
+#playlist-title h2 {
     margin-left: 1.4rem;
     font-size: 15px;
+    color: white;
 }
+#playlist-title a {
+    margin-left: 1rem;
+}
+#playlist {
+    flex: 1 0 0;
+    overflow: auto;
+    margin-top: 0;
+}
+
 #items {
     overflow: auto;
     max-height: calc(100vh - 100px);
@@ -281,7 +290,7 @@ footer>div {
     display: inline-block;
 }
 #controls {
-    flex: 0 1 400px;
+    flex: 0 2 600px;
     text-align: center;
 }
 #controls>div:nth-of-type(2) {
@@ -355,6 +364,10 @@ footer>div {
     height:18px;
     width: 18px;
 }
+#volume-button {
+    background: none;
+    border: 0;
+}
 #volume-bar {
     width: 50%;
     margin: auto;
@@ -403,7 +416,7 @@ footer h3 {
         display: none;
     }
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 585px) {
     aside {
         width: 50px;
     }
@@ -451,16 +464,27 @@ footer h3 {
         height:35px;
     }
     #volume>* {
-    margin: 0 0.2rem;
+        margin: 0 0.2rem;
+    }
+    #volume-button:focus + #volume-bar {
+        display: inline-block;
     }
     #volume-bar {
         display: none;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        right: 0;
+        transform: rotate(-90deg) translate(60%, 150%);
     }
 }
 @media screen and (max-width: 420px) {
     #playing>img {
         display: none;
     }
+    #controls {
+        flex: 0 1 400px;
 }
 @media screen and (max-width: 340px) {
     .product, .artist {
