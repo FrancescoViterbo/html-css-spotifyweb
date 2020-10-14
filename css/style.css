@@ -46,15 +46,6 @@ a:hover h2, a:hover h4 {
 a:hover span {
     background-color: white;
 }
-a span {
-    font-size: 35px;
-    font-weight: bolder;
-    background-color: grey;
-    color: black;
-    height: 38px;
-    width: 38px;
-    text-align: center;
-}
 
 /* Aside */
 
@@ -84,6 +75,13 @@ aside a {
     font-weight: bold;
 }
 aside span {
+    font-size: 35px;
+    font-weight: bolder;
+    background-color: grey;
+    color: black;
+    height: 38px;
+    width: 38px;
+    text-align: center;
     margin: 0 1rem 0 0;
     font-weight: normal;
 }
@@ -146,6 +144,7 @@ aside span {
 #aside-bot div:last-child h3 {
     color: white;
 }
+
 /* Main */
 
 main {
