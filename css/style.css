@@ -167,6 +167,7 @@ header {
     height: 100px;
     text-align: right;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
 }
 header button {
     position: relative;
@@ -178,7 +179,6 @@ header button {
     margin: 0 3rem;
     padding: 1rem 2.5rem;
     border-radius: 40px;
-    z-index: 50;
     font-weight: bold;
     cursor: pointer;
     font-size: 12px;
@@ -225,6 +225,10 @@ nav {
 }
 .img-over {
     position: relative;
+    cursor: pointer;
+}
+.img-over:hover .ready-to-play {
+    display: inline-block;
 }
 .ready-to-play {
     position: absolute;
@@ -232,17 +236,28 @@ nav {
     top: 0;
     bottom: 0;
     width: 100%;
+    height: 98%;
     background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.ready-to-play img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
 /* Footer */
 
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
     height: 100px;
     background: #242424;
-    z-index: 51;
+    z-index: 61;
     justify-content: space-between;
     align-items: center;
     font-size: 10px;
@@ -250,15 +265,16 @@ footer {
 footer>div {
     position: relative;
 }
+#playing {
+    flex: 0 1 220px;
+    align-items: center;
+    justify-content: flex-start;
+}
 #playing>img {
     width: 30%;
     margin: auto;
     max-width: 100px;
     margin-left: 1rem;
-}
-#playing {
-    flex: 0 1 220px;
-    align-items: center;
 }
 #playing div img {
     height: 17px;
@@ -323,6 +339,7 @@ footer>div {
     border-radius: 10px;
     width: 85%;
     cursor: pointer;
+    margin: 0 0.2rem;
 }
 #progress {
     width: 30%;
@@ -341,6 +358,7 @@ footer>div {
     min-height: 10px;
     flex: 0 1 220px;
     padding-right: 1rem;
+    justify-content: flex-end;
 }
 #volume>* {
     margin: 0 0.4rem;
@@ -423,12 +441,41 @@ footer h3 {
     #playlist {
         display: none;
     }
+    #recently, #for-you, #artists {
+        justify-content: space-around;
+    }
+    .product, .artist {
+        flex: 0 1 130px;
+    }
+    #playing>img {
+        margin-left: 0;
+    }
     #control-buttons a {
-        width: 30px;
+        width: 22px;
+    }
+    #control-buttons img {
+        height: 17px;
+    }
+    #control-buttons a:nth-of-type(3) img {
+        height:25px;
+    }
+    #control-buttons a:nth-of-type(3) img:hover {
+        height:35px;
+    }
+    #volume>* {
+    margin: 0 0.2rem;
+    }
+    #volume-bar {
+        display: none;
     }
 }
 @media screen and (max-width: 420px) {
     #playing>img {
         display: none;
+    }
+}
+@media screen and (max-width: 340px) {
+    .product, .artist {
+        flex: 0 1 100px;
     }
 }
