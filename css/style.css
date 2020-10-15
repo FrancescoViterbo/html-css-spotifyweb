@@ -200,10 +200,18 @@ nav {
     background-color: grey;
     border-radius: 10px;
 }
-#recently, #for-you, #artists {
+#recently {
     justify-content: space-between;
     align-items: flex-start;
     margin-left: 1rem;
+}
+#for-you .container-max-width, #artists .container-max-width {
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+.container-max-width {
+    width: 33%;
 }
 .product, .artist {
     text-align: center;
@@ -404,16 +412,28 @@ footer h3 {
 
 /* Media Queries */
 
+@media screen and (min-width: 1265px) {
+    .container-max-width {
+        width: 100%;
+    }
+    #for-you .container-max-width, #artists .container-max-width {
+        justify-content: flex-start;
+    }
+    #for-you .product:first-of-type, #artists .artist:first-of-type {
+        margin-right: calc((100% - 1000px) / 5);
+        flex-grow: 0 0 160;
+    }
+}
 @media screen and (max-width: 1010px) {
-    #recently, #for-you, #artists {
+    #recently, #for-you .container-max-width, #artists .container-max-width {
         justify-content: flex-start;
         flex-wrap: wrap;
     }
-    .empty {
-        display: none;
+    .container-max-width {
+        width: 100%;
     }
 }
-@media screen and (max-width: 585px) {
+@media screen and (max-width: 600px) {
     aside {
         width: 50px;
     }
@@ -439,7 +459,10 @@ footer h3 {
     #playlist {
         display: none;
     }
-    #recently, #for-you, #artists {
+    #recently {
+        justify-content: space-around;
+    }
+    #for-you .container-max-width, #artists .container-max-width {
         justify-content: space-around;
     }
     .product, .artist {
