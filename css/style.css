@@ -421,7 +421,6 @@ footer h3 {
     }
     #for-you .product:first-of-type, #artists .artist:first-of-type {
         margin-right: calc((100% - 1000px) / 5);
-        flex-grow: 0 0 160;
     }
 }
 @media screen and (max-width: 1010px) {
